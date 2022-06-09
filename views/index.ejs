@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Perguntas</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <img src="/img/logo.png" alt="" srcset="" />
+    <h1>Bem-vindo, <%= nome %>!</h1>
+    <p>Sua idade: <%= idade %></p>
+    <% if(msgErro) { %>
+    <p>Isso é uma mensagem de erro</p>
+    <% } else { %>
+    <p>Deu certo!</p>
+    <% } %>
+    <ul>
+      <% frutas.forEach((fruta) => { %>
+      <li><%= fruta %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
