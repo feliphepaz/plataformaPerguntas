@@ -2,13 +2,10 @@
 
 <section>
   <div class="container">
-    <a href="/perguntar" class="btn-perguntar">Perguntar</a>
-    <% perguntas.forEach((pergunta) => { %>
     <div class="pergunta">
       <h3><%= pergunta.titulo %></h3>
-      <a href="/pergunta/<%= pergunta.id %>" class="btn-responder">Responder</a>
+      <p><%= pergunta.descricao %></p>
     </div>
-    <% }) %>
   </div>
 </section>
 

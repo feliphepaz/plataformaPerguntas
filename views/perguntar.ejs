@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<section class="perguntar">
+  <div class="container">
+    <h2>Realizar pergunta</h2>
+    <form method="POST" action="/salvarpergunta">
+      <label>Título</label>
+      <input type="text" placeholder="Título" name="titulo" />
+      <label>Descrição</label>
+      <textarea
+        placeholder="Descreva sua pergunta aqui"
+        name="descricao"
+      ></textarea>
+      <input type="submit" />
+    </form>
+  </div>
+</section>
+
+<%- include('partials/footer.ejs') %>
