@@ -2,10 +2,25 @@
 
 <section>
   <div class="container">
+    <a href="/" class="btn-nav">Voltar</a>
     <div class="pergunta">
       <h3><%= pergunta.titulo %></h3>
       <p><%= pergunta.descricao %></p>
     </div>
+    <% if (respostas.length !== 0) { %>
+    <ul class="respostas">
+      <h3>Respostas</h3>
+      <% respostas.forEach((resposta) => { %>
+      <li><%= resposta.corpo %></li>
+      <% }) %>
+    </ul>
+    <% } %>
+    <form class="responder" method="POST" action="/responder">
+      <h3>Responda</h3>
+      <textarea name="corpo"></textarea>
+      <input type="hidden" name="pergunta" value="<%= pergunta.id %>" />
+      <input type="submit" value="Responder" />
+    </form>
   </div>
 </section>
 
